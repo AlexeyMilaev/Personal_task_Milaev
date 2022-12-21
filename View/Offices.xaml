@@ -1,88 +1,113 @@
-﻿<Window x:Class="personal_task_Milaev.View.Offices"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:personal_task_Milaev.View" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d"
-        Title="Offices" 
-        Height="600" 
-        Width="1000"
-        WindowStyle="None"
-        WindowStartupLocation="CenterScreen"
-        FontFamily="gilroy-bold"
-        MouseDown="Window_MouseDown"
-        ResizeMode="NoResize"
-        AllowsTransparency="True"
-        Background="Transparent">
+﻿<Page
+    x:Class="personal_task_Milaev.View.Offices"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:personal_task_Milaev.View"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Offices"
+    Width="1000"
+    Height="600"
+    mc:Ignorable="d">
+    <Grid>
 
-    <Border Background="Beige" Padding="7px" CornerRadius="15">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="120"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Image
-            Grid.RowSpan="3"
-            Grid.ColumnSpan="3"
-            Source="/Images/1.jpg"
-            Stretch="UniformToFill" />
-            <StackPanel Grid.ColumnSpan = "3"  
-                    Background="#6b8c8f"/>
-
-            <TextBlock Margin="50,0,0,0"
-                   Grid.ColumnSpan="2"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Center"
-                   FontSize="20"
-                   FontWeight="SemiBold">
-            <Run Foreground="White">Индивидуальная работа | Страховая компания |</Run>
-            <Run
-                Cursor="Hand"
-                Foreground="LightGoldenrodYellow"
-                TextDecorations="Underline"
-                ToolTip="Практическая работа по раз. польз. инт.">
-                Тот Свет
-                
-            </Run>
-            </TextBlock>
-
+        <Border Grid.Row="1">
             <StackPanel
-            Grid.Row="0"
-            Grid.Column="2"
-            Margin="0,0,10,0"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center">
-                <Button   
-                x:Name="btnClose"
-                Click="btnClose_Click"
-                ToolTip="Закрыть приложение"
-                Style="{StaticResource MaterialDesignIconForegroundButton}">
-                    <materialDesign:PackIcon Foreground="#FFFEFEFE" Kind="Close" />
-                </Button>
-            </StackPanel>
+                Height="70"
+                Background="#6b8c8f"
+                Effect="{StaticResource MaterialDesignElevationShadow12}" />
+        </Border>
 
+        <Border Grid.Row="2">
             <StackPanel
-            Grid.Row="0"
-            Grid.Column="0"
-            Margin="0,0,10,0"
+                Height="70"
+                Background="#6b8c8f"
+                Effect="{StaticResource MaterialDesignElevationShadow12}" />
+        </Border>
+
+        <Border Grid.Row="3">
+            <StackPanel
+                Height="70"
+                Background="#6b8c8f"
+                Effect="{StaticResource MaterialDesignElevationShadow12}" />
+        </Border>
+
+        <StackPanel
+            Margin="0,0,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <TextBlock
+                Margin="0,0,0,3"
+                FontSize="24"
+                FontWeight="Bold"
+                Foreground="Black"
+                Text="Офисы в г.Москва" />
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            Margin="0,0,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Center">
-                <Button   
-                x:Name="btnBackSpase"
-                Click="btnBackSpase_Click"
-                ToolTip="Вернуться"
-                Style="{StaticResource MaterialDesignIconForegroundButton}">
-                    <materialDesign:PackIcon Foreground="#FFFEFEFE" Kind="Backspace" />
-                </Button>
-            </StackPanel>
-        </Grid>
-    </Border>
-</Window>
+            <TextBlock
+                Margin="20,0,0,0"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="Black"
+                Text="Офис обслуживания клиентов «Королёв»" />
+            <TextBlock
+                Margin="10,0,0,0"
+                FontSize="20"
+                FontWeight="Light"
+                Foreground="Black"
+                Text="142800 , г.Ступино, ул.Горького, д.26,корпус Е, офис № 103/2 (1 этаж)" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+            <TextBlock
+                Margin="20,0,0,0"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="Black"
+                Text="Офис обслуживания клиентов «Сергиев Посад»" />
+            <TextBlock
+                Margin="10,0,0,0"
+                FontSize="20"
+                FontWeight="Light"
+                Foreground="Black"
+                Text="142214, Московская обл., г. Серпухов, ул. Ворошилова, д.137, 2 этаж" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="3"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+            <TextBlock
+                Margin="20,0,0,0"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="Black"
+                Text="Офис обслуживания клиентов «Клин»" />
+            <TextBlock
+                Margin="10,0,0,0"
+                FontSize="20"
+                FontWeight="Light"
+                Foreground="Black"
+                Text="142200, Московская обл., г. Серпухов, ул. Ворошилова, д.128, 1 этаж" />
+        </StackPanel>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+    </Grid>
+</Page>

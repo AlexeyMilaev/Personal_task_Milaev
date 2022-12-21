@@ -17,23 +17,11 @@ namespace personal_task_Milaev.View
     /// <summary>
     /// Логика взаимодействия для help.xaml
     /// </summary>
-    public partial class help : Window
+    public partial class Help : Page
     {
-        public help()
+        public Help()
         {
             InitializeComponent();
-        }
-        private void btnBackSpase_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
         }
     }
 }

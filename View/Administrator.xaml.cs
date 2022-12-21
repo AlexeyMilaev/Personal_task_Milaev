@@ -1,4 +1,5 @@
-﻿using System;
+﻿using personal_task_Milaev.View.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace personal_task_Milaev.View.Pages.LoginPage
+namespace personal_task_Milaev.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindowRegistrationPage.xaml
+    /// Логика взаимодействия для Administrator.xaml
     /// </summary>
-    public partial class MainWindowRegistrationPage : Page
+    public partial class Administrator : Page
     {
-        public MainWindowRegistrationPage()
+        public Administrator()
         {
             InitializeComponent();
+        }
+
+
+        private void MenuRequests_Click(object sender, RoutedEventArgs e)
+        {
+            GridContentLoad.Children.Clear();
+            GridContentLoad.Children.Add(new AdminUserControl());
         }
     }
 }

@@ -18,7 +18,7 @@ namespace personal_task_Milaev.View
     /// <summary>
     /// Логика взаимодействия для Offices.xaml
     /// </summary>
-    public partial class Offices : Window
+    public partial class Offices : Page
     {
         public Offices()
         {
@@ -30,14 +30,6 @@ namespace personal_task_Milaev.View
             Application.Current.Shutdown();
         }
 
-        private void btnBackSpase_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
     }
 }

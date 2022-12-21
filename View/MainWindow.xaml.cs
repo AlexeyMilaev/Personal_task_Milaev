@@ -1,6 +1,5 @@
 ﻿using personal_task_Milaev.Core;
 using personal_task_Milaev.View;
-using personal_task_Milaev.View.Pages.LoginPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,11 +26,20 @@ namespace personal_task_Milaev
         public MainWindow()
         {
             InitializeComponent();
+
+            FrameNavigate.FrameObject = MainWindowFrame;
+            FrameNavigate.FrameObject.Navigate(new MainPage());
+
+            FrameNavigate.DB = new Model.dbEntities3();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DragMove();
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+            
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -39,29 +47,25 @@ namespace personal_task_Milaev
             Application.Current.Shutdown();
         }
 
-        private void comeBtn_Click(object sender, RoutedEventArgs e)
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindowFrame.Navigate(new Login());
         }
+
 
         private void helpBtn_Click(object sender, RoutedEventArgs e)
         {
-            help win = new help();
-            win.Owner = this;
-            win.Show();
+            MainWindowFrame.Navigate(new Help());
         }
 
         private void OfficesBtn_Click(object sender, RoutedEventArgs e)
         {
-            Offices win = new Offices();
-            win.Owner = this;
-            win.Show();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Close();
-
-
-
+            MainWindowFrame.Navigate(new Offices());
         }
 
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindowFrame.Navigate(new MainPage());
+        }
     }
 }

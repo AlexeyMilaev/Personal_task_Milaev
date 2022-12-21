@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace personal_task_Milaev.View.Pages.LoginPage
+namespace personal_task_Milaev.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindowLoginPage.xaml
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainWindowLoginPage : Page
+    public partial class MainPage : Page
     {
-        public MainWindowLoginPage()
+        public MainPage()
         {
             InitializeComponent();
         }

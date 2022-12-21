@@ -1,0 +1,154 @@
+﻿<Page
+    x:Class="personal_task_Milaev.View.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:personal_task_Milaev.View"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Login"
+    Width="1000"
+    Height="480"
+    mc:Ignorable="d">
+    <Grid>
+        <Border
+            Width="350"
+            Margin="325,0,325,100"
+            Background="#6b8c8f"
+            CornerRadius="20"
+            Effect="{StaticResource MaterialDesignElevationShadow24}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    FontSize="28"
+                    FontWeight="Bold"
+                    Foreground="Black"
+                    Text="Авторизация" />
+
+
+
+                <StackPanel
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal">
+                        <materialDesign:PackIcon
+                            Width="24"
+                            Height="24"
+                            Margin="0,4,3,0"
+                            Foreground="Black"
+                            Kind="Login" />
+                        <TextBox
+                            x:Name="TbLogin"
+                            Width="190"
+                            materialDesign:HintAssist.Hint="Введите почту"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            FontSize="18"
+                            Foreground="Black" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Margin="0,20,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal">
+                        <materialDesign:PackIcon
+                            Width="24"
+                            Height="24"
+                            Margin="0,5,5,0"
+                            Foreground="Black"
+                            Kind="Key" />
+                        <PasswordBox
+                            x:Name="PsbPassword"
+                            Width="190"
+                            materialDesign:HintAssist.Hint="Введите пароль"
+                            materialDesign:TextFieldAssist.HasClearButton="True"
+                            FontSize="18"
+                            Foreground="Black" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,18,0,0">
+                        <Button
+                            x:Name="LoginBtn"
+                            Width="130"
+                            Height="40"
+                            Margin="0,0,0,0"
+                            Background="#849ea1"
+                            BorderBrush="Transparent"
+                            Click="LoginBtn_Click"
+                            Effect="{StaticResource MaterialDesignElevationShadow4}"
+                            FontSize="24"
+                            Foreground="Black">
+                            <StackPanel
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                                <TextBlock
+                                    Width="70"
+                                    Height="35"
+                                    FontWeight="SemiBold"
+                                    Text="Войти" />
+                            </StackPanel>
+
+                        </Button>
+
+                    </StackPanel>
+
+                    <StackPanel
+                        Width="320"
+                        Margin="20,20,0,0"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+
+                        <TextBlock
+                            Height="20"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontSize="14"
+                            FontWeight="Normal"
+                            Foreground="Black"
+                            Text="Новый пользователь?" />
+
+                        <Button
+                            x:Name="RegBtn"
+                            Width="165"
+                            Height="30"
+                            Margin="0,0,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="RegBtn_Click"
+                            FontSize="14"
+                            Foreground="Black">
+
+                            <TextBlock
+                                Height="24"
+                                Margin="0,0,0,0"
+                                FontWeight="Normal">
+                                <Underline>Зарегистрироваться</Underline>
+                            </TextBlock>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</Page>
