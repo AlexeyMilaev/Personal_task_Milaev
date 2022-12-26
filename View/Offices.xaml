@@ -36,7 +36,7 @@
         <StackPanel
             Margin="0,0,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Top">
+            VerticalAlignment="Center">
             <TextBlock
                 Margin="0,0,0,3"
                 FontSize="24"
@@ -44,6 +44,23 @@
                 Foreground="Black"
                 Text="Офисы в г.Москва" />
         </StackPanel>
+
+        <Button
+                x:Name="BtnClose"
+                Grid.Row="0"
+                Width="70"
+                Height="Auto"
+                Margin="0,0,0,0"
+                HorizontalAlignment="Right"
+                Background="Transparent"
+                Foreground="Black"
+                BorderThickness="0"
+                Click="BtnClose_Click">
+            <materialDesign:PackIcon
+                     Width="45"
+                    Height="35"
+                    Kind="CloseBoxOutline" />
+        </Button>
 
         <StackPanel
             Grid.Row="1"
@@ -63,6 +80,7 @@
                 Foreground="Black"
                 Text="142800 , г.Ступино, ул.Горького, д.26,корпус Е, офис № 103/2 (1 этаж)" />
         </StackPanel>
+        
         <StackPanel
             Grid.Row="2"
             Margin="0,0,0,0"
@@ -101,7 +119,7 @@
         </StackPanel>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="120" />
             <RowDefinition Height="120" />
             <RowDefinition Height="120" />

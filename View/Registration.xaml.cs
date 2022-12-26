@@ -28,13 +28,18 @@ namespace personal_task_Milaev.View
 
         private async void RegBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(fio.Text) || string.IsNullOrEmpty(telephone.Text) || string.IsNullOrEmpty(email.Text) || string.IsNullOrEmpty(password.Password))
+            if (string.IsNullOrEmpty(fio.Text) ||
+                string.IsNullOrEmpty(telephone.Text) || 
+                string.IsNullOrEmpty(email.Text) || 
+                string.IsNullOrEmpty(password.Password))
             {
-                MessageBox.Show("Все поля должны быть заполнены!", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
-
+                MessageBox.Show("Все поля должны быть заполнены!", 
+                    "Системное сообщение", 
+                    MessageBoxButton.OK, 
+                    MessageBoxImage.Error);
             }
             else
-            {
+            {   
                 FrameNavigate.DB.Users.Add(new Model.User
                 {   
                     UserFIO = fio.Text,
@@ -48,6 +53,11 @@ namespace personal_task_Milaev.View
                 MessageBox.Show("Учетная запись создана!", "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Information);
                 FrameNavigate.FrameObject.Navigate(new Login());
             }
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainPage());
         }
     }
 }

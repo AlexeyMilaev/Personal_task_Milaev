@@ -63,9 +63,6 @@ namespace personal_task_Milaev
             MainWindowFrame.Navigate(new Offices());
         }
 
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindowFrame.Navigate(new MainPage());
-        }
+
     }
 }

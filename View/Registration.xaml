@@ -26,6 +26,24 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
+                <Button
+                x:Name="BtnClose"
+                Grid.Row="0"
+                Width="65"
+                Height="50"
+                Margin="0,0,0,0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Background="Transparent"
+                Foreground="Black"
+                BorderThickness="0"
+                Click="BtnClose_Click">
+                    <materialDesign:PackIcon
+                    Width="37"
+                    Height="26"
+                    Kind="Close" />
+                </Button>
+                
                 <TextBlock
                     Grid.Row="0"
                     HorizontalAlignment="Center"
@@ -67,8 +85,6 @@
                             Foreground="Black" />
                     </StackPanel>
 
-
-
                     <StackPanel
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
@@ -82,10 +98,6 @@
                             FontSize="16"
                             Foreground="Black" />
                     </StackPanel>
-
-
-
-
                 </StackPanel>
 
                 <StackPanel Grid.Row="3">
@@ -118,8 +130,6 @@
                             Foreground="Black" />
                     </StackPanel>
 
-
-
                     <StackPanel
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
@@ -133,9 +143,6 @@
                             FontSize="16"
                             Foreground="Black" />
                     </StackPanel>
-
-
-
 
                     <Button
                         x:Name="RegBtn"

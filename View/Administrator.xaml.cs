@@ -1,4 +1,5 @@
-﻿using personal_task_Milaev.View.UserControls;
+﻿using personal_task_Milaev.Core;
+using personal_task_Milaev.View.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,11 @@ namespace personal_task_Milaev.View
         {
             GridContentLoad.Children.Clear();
             GridContentLoad.Children.Add(new AdminUserControl());
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainPage());
         }
     }
 }

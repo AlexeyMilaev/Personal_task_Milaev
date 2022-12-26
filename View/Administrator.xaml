@@ -22,6 +22,7 @@
                     <RowDefinition Height="70" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
+                
                 <Menu
                     Grid.Row="0"
                     Background="#6b8c8f"
@@ -54,7 +55,24 @@
                     </MenuItem>
 
                 </Menu>
-                
+              
+                <Button
+                x:Name="BtnClose"
+                Grid.Column="1"
+                Width="70"
+                Height="Auto"
+                Margin="0,14,0,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                Foreground="Black"
+                BorderThickness="0"
+                Click="BtnClose_Click">
+                    <materialDesign:PackIcon
+                        Width="45"
+                        Height="35"
+                        Kind="CloseBoxOutline" />
+                </Button>
                 
                 <Grid x:Name="GridContentLoad" Grid.Row="1" />
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using personal_task_Milaev.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,9 @@ namespace personal_task_Milaev.View
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            FrameNavigate.FrameObject.Navigate(new MainPage());
         }
-
-
     }
 }

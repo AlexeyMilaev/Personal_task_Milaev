@@ -92,5 +92,10 @@ namespace personal_task_Milaev.View
                 MessageBox.Show("Произошла ошибка: " + ex.ToString(), "Системное сообщение", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainPage());
+        }
     }
 }

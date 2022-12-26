@@ -69,5 +69,10 @@ namespace personal_task_Milaev.View
         {
             FrameNavigate.FrameObject.Navigate(new Registration());
         }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            FrameNavigate.FrameObject.Navigate(new MainPage());
+        }
     }
 }
